@@ -1,13 +1,16 @@
 import { Container } from "react-bootstrap";
 
-import { Search } from "./Search";
+import { SearchSection } from "./SearchSection/SearchSection.jsx";
+import { MyTeamSection } from "./MyTeamSection/MyTeamSection.jsx";
 
 export const MainPage = () => {
   return (
     <Container>
       <div className="d-flex row">
-        <Search />
+      <SearchSection />
+      <MyTeamSection />
       </div>
+      
     </Container>
   );
 };

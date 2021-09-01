@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <Navbar bg="light" className="fixed-top mb-5">
       <Container>
-        <Navbar.Brand href="/">Hero Team</Navbar.Brand>
+        <Navbar.Brand className="fs-3" href="/">Hero Team</Navbar.Brand>
       </Container>
     </Navbar>
   );
