@@ -1,7 +1,7 @@
 import md5 from "md5";
 
-const PUBLIC_KEY = '6e574ec635dc27e2ebb826c9e07f6bac';
-const PRIVATE_KEY = '904b3bab816cd3630ebfc428abeda128b69dedf5';
+const PUBLIC_KEY = "cf147e304056a973462499001286f73a";
+const PRIVATE_KEY = "5c9bf3b2ec31a45d375bb4d439ee726b4286e8b2";
 
 const ts = new Date().getTime();
 const md5Hash = md5(ts + PRIVATE_KEY + PUBLIC_KEY);
@@ -10,5 +10,6 @@ const url = `http://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${PU
 
 export const getCharacters = () => {
   return fetch(url)
-    .then(response => response.json())
-}
+    .then((response) => response.json())
+    .then((res) => res.data.results);
+};
