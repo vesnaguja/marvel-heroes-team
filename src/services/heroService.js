@@ -13,3 +13,15 @@ export const getCharacters = () => {
     .then((response) => response.json())
     .then((res) => res.data.results);
 };
+
+
+
+
+export const getSearchedHeroes = (searchedString) => {
+
+  const searchedHeroesUrl = searchedString === '' ? url : `${url}&nameStartsWith=${searchedString}`
+
+  return fetch(searchedHeroesUrl)
+    .then(response => response.json())
+    .then(result => result.data.results);
+}

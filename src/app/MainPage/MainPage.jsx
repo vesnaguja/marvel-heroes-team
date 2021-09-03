@@ -7,10 +7,9 @@ export const MainPage = () => {
   return (
     <Container>
       <div className="d-flex row">
-      <SearchSection />
-      <MyTeamSection />
+        <SearchSection />
+        <MyTeamSection />
       </div>
-      
     </Container>
   );
 };
