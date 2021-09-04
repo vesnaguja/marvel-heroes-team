@@ -5,7 +5,7 @@ import { Search } from "./Search";
 import { CardGrid } from "./CardGrid";
 
 
-export const SearchSection = () => {
+export const SearchSection = (props) => {
   const [searchedHeroes, setSearchedHeroes] = useState([]);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export const SearchSection = () => {
   return (
     <div className="col-8 ">
       <Search updateSearchedHeroesHandler={updateSearchedHeroesHandler} />
-      <CardGrid searchedHeroes={searchedHeroes} />
+      <CardGrid searchedHeroes={searchedHeroes} addHandler={props.addHandler} />
     </div>
   );
 };
