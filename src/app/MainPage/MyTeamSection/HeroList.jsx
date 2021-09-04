@@ -2,14 +2,14 @@ import { ListGroup } from "react-bootstrap";
 
 import { HeroListItem } from "./HeroListItem";
 
-export const HeroList = () => {
+export const HeroList = ({ addedHero }) => {
   return (
     <div className="col">
       <ListGroup>
-        <HeroListItem />
-        <HeroListItem />
-        <HeroListItem />
-        <HeroListItem />
+        {addedHero.map((oneHero) => {
+          return  <HeroListItem oneHero={oneHero} key={oneHero.id} />
+        })}
+       
       </ListGroup>
     </div>
   );
