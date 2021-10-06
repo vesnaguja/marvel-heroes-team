@@ -11,13 +11,22 @@ export const MainPage = () => {
     const newState = [...addedHero];
 
     const indexOfNewHero = newState.findIndex((current) => current.id === hero.id);
-    if(indexOfNewHero !== -1) return;
+    if (indexOfNewHero !== -1) return;
 
     newState.push(hero);
     setAddedHero(newState);
+
+  
+
+    // setAddedHero((prevState) => prevState.push(hero));
+
+    // const [counter, setCounter] = useState(0);
+
+    // funkcija koja povecava counter
+    // setCounter((prethodnaVrednostCounterState) => prethodnaVrednostCounterState + 1);
   };
 
-  console.log('main page: ' + addedHero);
+  console.log("main page: " + addedHero);
 
   return (
     <Container>
