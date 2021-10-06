@@ -7,7 +7,7 @@ export const HeroList = ({ addedHero }) => {
     <div className="col">
       <ListGroup>
         {addedHero.map((oneHero) => {
-          return  <HeroListItem oneHero={oneHero} key={oneHero.id} />
+          return <HeroListItem oneHero={oneHero} key={oneHero.id} />
         })}
        
       </ListGroup>
