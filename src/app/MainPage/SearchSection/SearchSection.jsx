@@ -23,7 +23,7 @@ export const SearchSection = (props) => {
   };
 
   return (
-    <div className="col-8 ">
+    <div className="col-9">
       <Search updateSearchedHeroesHandler={updateSearchedHeroesHandler} />
       <CardGrid searchedHeroes={searchedHeroes} addHandler={props.addHandler} />
     </div>

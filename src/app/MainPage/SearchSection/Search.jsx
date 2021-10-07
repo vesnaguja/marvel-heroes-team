@@ -15,7 +15,7 @@ export const Search = ({updateSearchedHeroesHandler}) => {
 
   return (
     <Form className="py-5 mt-5 ms-0 d-flex col-4" onSubmit={submitHandler}>
-      <FormControl type="search" placeholder="Search" className="me-2" aria-label="Search" ref={searchBox} />
+      <FormControl type="search" placeholder="Search" className="me-2 border-0 border-bottom" aria-label="Search" ref={searchBox} />
       <Button variant="secondary rounded-pill" type="submit">Search</Button>
     </Form>
   );

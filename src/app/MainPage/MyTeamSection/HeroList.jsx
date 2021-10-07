@@ -2,11 +2,12 @@ import { ListGroup } from "react-bootstrap";
 
 import { HeroListItem } from "./HeroListItem";
 
-export const HeroList = ({ addedHero }) => {
+export const HeroList = ({ myTeamList, deleteHeroHandler }) => {
+
   return (
     <ListGroup className="row">
-      {addedHero.map((oneHero) => {
-        return <HeroListItem oneHero={oneHero} key={oneHero.id} />;
+      {myTeamList.map((oneHero) => {
+        return <HeroListItem oneHero={oneHero} key={oneHero.id} deleteHeroHandler={deleteHeroHandler} />;
       })}
     </ListGroup>
   );
