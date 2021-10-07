@@ -1,10 +1,10 @@
 import { HeroList } from "./HeroList";
 
-export const MyTeamSection = ({addedHero}) => {
+export const MyTeamSection = ({myTeamList, deleteHeroHandler}) => {
   return (
-    <div className="col-4 pt-5 mt-5">
+    <div className="col-3 pt-5 mt-5">
       <h4 className="pb-5 ps-4">My Team</h4>
-      <HeroList addedHero={addedHero} />
+      <HeroList myTeamList={myTeamList} deleteHeroHandler={deleteHeroHandler} />
     </div>
   );
 };

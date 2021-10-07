@@ -5,34 +5,30 @@ import { SearchSection } from "./SearchSection/SearchSection.jsx";
 import { MyTeamSection } from "./MyTeamSection/MyTeamSection.jsx";
 
 export const MainPage = () => {
-  const [addedHero, setAddedHero] = useState([]);
+  const [myTeamList, setMyTeamList] = useState([]);
 
   const addHandler = (hero) => {
-    const newState = [...addedHero];
+    console.log("hero je " + hero.name);
+    const newState = [...myTeamList];
 
     const indexOfNewHero = newState.findIndex((current) => current.id === hero.id);
     if (indexOfNewHero !== -1) return;
 
     newState.push(hero);
-    setAddedHero(newState);
-
-  
-
-    // setAddedHero((prevState) => prevState.push(hero));
-
-    // const [counter, setCounter] = useState(0);
-
-    // funkcija koja povecava counter
-    // setCounter((prethodnaVrednostCounterState) => prethodnaVrednostCounterState + 1);
+    setMyTeamList(newState);
   };
 
-  console.log("main page: " + addedHero);
+  let deleteHeroHandler = (hero) => {
+    setMyTeamList((prevState) => prevState.filter((obj) => obj.id !== hero.id));
+  };
+
+  
 
   return (
     <Container>
       <div className="d-flex row">
         <SearchSection addHandler={addHandler} />
-        <MyTeamSection addedHero={addedHero} />
+        <MyTeamSection myTeamList={myTeamList} deleteHeroHandler={deleteHeroHandler} />
       </div>
     </Container>
   );
