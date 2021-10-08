@@ -8,7 +8,6 @@ export const MainPage = () => {
   const [myTeamList, setMyTeamList] = useState([]);
 
   const addHandler = (hero) => {
-    console.log("hero je " + hero.name);
     const newState = [...myTeamList];
 
     const indexOfNewHero = newState.findIndex((current) => current.id === hero.id);
@@ -21,8 +20,6 @@ export const MainPage = () => {
   let deleteHeroHandler = (hero) => {
     setMyTeamList((prevState) => prevState.filter((obj) => obj.id !== hero.id));
   };
-
-  
 
   return (
     <Container>
