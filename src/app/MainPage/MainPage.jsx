@@ -1,24 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 
 import { SearchSection } from "./SearchSection/SearchSection.jsx";
 import { MyTeamSection } from "./MyTeamSection/MyTeamSection.jsx";
 
 export const MainPage = () => {
-  const [myTeamList, setMyTeamList] = useState([]);
+  const [myTeamList, setMyTeamList] = useState(JSON.parse(localStorage.getItem("myHeroes")) || []);
 
   const addHandler = (hero) => {
-    const newState = [...myTeamList];
-
-    const indexOfNewHero = newState.findIndex((current) => current.id === hero.id);
+    const indexOfNewHero = myTeamList.findIndex((h) => h.id === hero.id);
     if (indexOfNewHero !== -1) return;
-
-    newState.push(hero);
-    setMyTeamList(newState);
+    setMyTeamList((prevState) => [...prevState, hero]);
   };
+
+  useEffect(() => {
+    localStorage.setItem("myHeroes", JSON.stringify(myTeamList));
+  }, [myTeamList]);
 
   let deleteHeroHandler = (hero) => {
     setMyTeamList((prevState) => prevState.filter((obj) => obj.id !== hero.id));
+    localStorage.removeItem("myHeroes");
   };
 
   return (
