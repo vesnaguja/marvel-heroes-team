@@ -7,8 +7,9 @@ export const CharacterCard = ({ hero, addHandler }) => {
     addHandler(hero);
   };
   return (
-    <div className="col-4 p-0">
-      <Card border="light" className="m-2 border-3 px-4 card-box">
+    <div className="col-sm-12 col-md-12 col-lg-6 col-xxl-4">
+
+      <Card border="light" className="border-3 px-3 card-box">
         <Card.Header className="bg-white border-0 ps-0 text-center">{hero.name}</Card.Header>
 
         <Card.Img
@@ -18,8 +19,8 @@ export const CharacterCard = ({ hero, addHandler }) => {
         />
 
         <Card.Body className="d-flex justify-content-between">
-          <Button variant="secondary rounded-pill">Info</Button>
-          <Button variant="secondary rounded-pill" onClick={onClick}>
+          <Button variant="btn btn-outline-dark rounded">Info</Button>
+          <Button variant="btn btn-outline-dark rounded" onClick={onClick}>
             Add
           </Button>
         </Card.Body>

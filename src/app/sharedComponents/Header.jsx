@@ -2,10 +2,12 @@ import { Navbar, Container } from "react-bootstrap";
 
 export const Header = () => {
   return (
-    <Navbar bg="light" className="fixed-top mb-5">
+    <div className="fixed-top mb-5 header">
       <Container>
-        <Navbar.Brand className="fs-3" href="/">Hero Team</Navbar.Brand>
+        <h2 className="fs-2 text-light fw-bold m-0 text-center" href="/">
+          HERO TEAM
+        </h2>
       </Container>
-    </Navbar>
+    </div>
   );
 };
