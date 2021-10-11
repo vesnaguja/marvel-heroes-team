@@ -10,7 +10,7 @@ export const HeroListItem = ({ oneHero, deleteHeroHandler }) => {
     <ListGroup.Item className="col p-0 my-2 border-3 border-light my-team-list-item">
       <div className="row align-items-center">
         <div className="col-3">
-          <img src={`${oneHero.thumbnail.path}/standard_small.${oneHero.thumbnail.extension}`} alt="" className="my-team-img" />
+          <img src={`${oneHero.thumbnail.path}/standard_small.${oneHero.thumbnail.extension}`} alt="" className="" />
         </div>
 
         <div className="col-7 text-start">
