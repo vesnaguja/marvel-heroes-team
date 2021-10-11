@@ -7,10 +7,23 @@ import styles from "./Search.module.css";
 export const Search = ({ updateSearchedHeroesHandler }) => {
   const searchBox = useRef();
 
+  // const submitHandler = (e) => {
+  //   e.preventDefault();
+  //   const searchedString = searchBox.current.value.trim().toLowerCase();
+  //   getSearchedHeroes(searchedString).then((res) => updateSearchedHeroesHandler(res));
+  // };
+
   const submitHandler = (e) => {
     e.preventDefault();
     const searchedString = searchBox.current.value.trim().toLowerCase();
-    getSearchedHeroes(searchedString).then((res) => updateSearchedHeroesHandler(res));
+
+    async function searchedHeroesFunction() {
+      const res = await getSearchedHeroes(searchedString);
+      updateSearchedHeroesHandler(res);
+    }
+
+    searchedHeroesFunction();
+    
   };
 
   return (

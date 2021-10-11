@@ -8,9 +8,15 @@ export const SearchSection = (props) => {
   const [searchedHeroes, setSearchedHeroes] = useState([]);
 
   useEffect(() => {
-    getCharacters().then((data) => {
-      setSearchedHeroes(data);
-    });
+    // getCharacters().then((data) => {
+    //   setSearchedHeroes(data);
+    // });
+
+    async function getCharactersAndSetState() {
+      const charactersArray = await getCharacters();
+      setSearchedHeroes(charactersArray);
+    }
+    getCharactersAndSetState();
   }, []);
 
   const updateSearchedHeroesHandler = (value) => {
