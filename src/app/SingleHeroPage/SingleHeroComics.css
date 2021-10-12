@@ -13,6 +13,7 @@
 .container-for-comics-img-and-title:hover{
   transform: scale(1.2);
   z-index: 999;
+  cursor: pointer;
 }
 
 /* Bottom left text */
