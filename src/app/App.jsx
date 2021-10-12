@@ -10,8 +10,8 @@ function App() {
   return (
     <Fragment>
       <Switch>
-        <Route exact path="/" component={MainPage} />
-        <Route exact path="/characters/:id" component={SingleHeroPage} />
+        <Route exact path="/marvel-heroes-team/" component={MainPage} />
+        <Route exact path="/marvel-heroes-team/characters/:id" component={SingleHeroPage} />
       </Switch>
     </Fragment>
   );

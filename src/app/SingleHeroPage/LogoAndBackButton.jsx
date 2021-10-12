@@ -10,7 +10,7 @@ const LogoAndBackButton = () => {
         <h3 className="ps-2">Marvel Heros</h3>
       </div>
 
-      <Link to="/" className="text-decoration-none text-dark">
+      <Link to="/marvel-heroes-team/" className="text-decoration-none text-dark">
         <h5 className="back-to-homepage" variant="outline-dark">
           Homepage
         </h5>

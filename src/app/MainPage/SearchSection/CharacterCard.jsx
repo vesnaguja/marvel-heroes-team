@@ -19,7 +19,7 @@ export const CharacterCard = ({ hero, addHandler }) => {
         />
 
         <Card.Body className="d-flex justify-content-between">
-          <Link to={`/characters/${hero.id}`}>
+          <Link to={`/marvel-heroes-team/characters/${hero.id}`}>
             <Button variant="btn btn-outline-dark rounded">Info</Button>
           </Link>
 
