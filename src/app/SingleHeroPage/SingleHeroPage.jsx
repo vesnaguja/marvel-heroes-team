@@ -4,6 +4,8 @@ import { useParams } from "react-router";
 import { getSingleHero } from "../../services/heroService";
 import { Header } from "../sharedComponents/Header";
 import SingleHeroDetails from "./SingleHeroDetails";
+import ShowComicsSection from "./ShowComicsSection";
+import LogoAndBackButton from "./LogoAndBackButton";
 
 export const SingleHeroPage = () => {
   let { id } = useParams("id");
@@ -11,10 +13,6 @@ export const SingleHeroPage = () => {
   const [singleHero, setSingleHero] = useState({});
 
   useEffect(() => {
-    // getSingleHero(id).then((heroData) => {
-    //   setSingleHero(heroData);
-    // });
-
     async function getHeroAndSetState() {
       const heroData = await getSingleHero(id);
       setSingleHero(heroData);
@@ -26,8 +24,10 @@ export const SingleHeroPage = () => {
   return (
     <Fragment>
       <Header title={"SINGLE CHARACTER"} />
-      <Container>
+      <Container className="pb-5">
+        <LogoAndBackButton />
         <SingleHeroDetails hero={singleHero} key={singleHero.id} />
+        <ShowComicsSection />
       </Container>
     </Fragment>
   );
