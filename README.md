@@ -1,5 +1,6 @@
 # Marvel Heroes Team
-A SPA for searching, browsing and adding heroes to “My team”. App pulls data from API https://developer.marvel.com/ with authorization. You can try this app at https://vesnaguja.github.io/marvel-heroes-team/ 
+A SPA for searching, browsing and adding heroes to “My team”. App pulls data from API https://developer.marvel.com/ with authorization.
+You can try this app at https://vesnaguja.github.io/marvel-heroes-team/ 
 
 ## Showcasing
 
