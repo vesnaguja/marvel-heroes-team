@@ -10,7 +10,7 @@ You can try this app at https://vesnaguja.github.io/marvel-heroes-team/
 - React Router
 - useParams hook
 
-### Stack
+## Stack
 
 - Language: JS(ES6)
 - Libraries: React, Bootstrap5, React Bootstrap
